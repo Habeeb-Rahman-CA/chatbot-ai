@@ -1,0 +1,222 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "hey there",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "what's up",
+        "howdy",
+        "greetings"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hey there! Great to chat with you. What's on your mind?",
+        "Hi! Ready to explore AI and chat with me?",
+        "Greetings! Feel free to ask me anything or tell me your name."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "talk to you later",
+        "exit",
+        "quit",
+        "have a good day",
+        "farewell"
+      ],
+      "responses": [
+        "Goodbye! Have a fantastic day ahead!",
+        "See you later! It was fun chatting.",
+        "Take care! Feel free to come back whenever you want to talk.",
+        "Bye! Happy learning!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "appreciate it",
+        "much obliged",
+        "thanks a lot",
+        "thank you so much"
+      ],
+      "responses": [
+        "You're very welcome!",
+        "Glad I could help!",
+        "Anytime! Let me know if there's anything else.",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": [
+        "who are you",
+        "what is your name",
+        "what are you",
+        "tell me about yourself",
+        "are you a human",
+        "are you a robot"
+      ],
+      "responses": [
+        "I am PyBot, a basic AI chatbot built to demonstrate foundational NLP (Natural Language Processing) and conversational interaction!",
+        "I'm an educational AI assistant that parses your sentences, figures out your intent, and replies thoughtfully.",
+        "I'm PyBot! An AI created to show how input becomes response using tokenization, TF-IDF vectorization, and intent matching."
+      ]
+    },
+    {
+      "tag": "nlp_explanation",
+      "patterns": [
+        "what is nlp",
+        "explain natural language processing",
+        "how do chatbots work",
+        "how do you understand me",
+        "how does nlp work",
+        "what is tokenization",
+        "what is tfidf"
+      ],
+      "responses": [
+        "NLP (Natural Language Processing) is the field of AI that enables computers to read, decipher, understand, and make sense of human language in a valuable way.",
+        "Here's my pipeline: 1) Tokenize text into words, 2) Clean & stem words, 3) Convert text to TF-IDF mathematical vectors, 4) Calculate Cosine Similarity with known intents, 5) Select the best response!",
+        "At a high level: Human Text -> Tokenization -> Stopword Removal -> Vectorization (Numbers) -> Similarity Scoring -> Response Selection."
+      ]
+    },
+    {
+      "tag": "user_name_query",
+      "patterns": [
+        "what is my name",
+        "do you know who i am",
+        "who am i",
+        "what's my name",
+        "do you remember my name"
+      ],
+      "responses": [
+        "You told me your name is {user_name}!",
+        "Your name is {user_name}. It's great chatting with you!",
+        "I remember! You are {user_name}."
+      ],
+      "fallback_response": "I don't think you've told me your name yet. You can say 'My name is [Your Name]' so I can remember!"
+    },
+    {
+      "tag": "user_name_tell",
+      "patterns": [
+        "my name is {name}",
+        "i am {name}",
+        "call me {name}",
+        "name is {name}",
+        "i'm {name}"
+      ],
+      "responses": [
+        "Nice to meet you, {user_name}! I'll remember that.",
+        "Hello {user_name}! How are you doing today?",
+        "Got it, {user_name}! Delighted to chat with you."
+      ]
+    },
+    {
+      "tag": "time_query",
+      "patterns": [
+        "what time is it",
+        "tell me the time",
+        "what is the current time",
+        "what's the time",
+        "current time"
+      ],
+      "responses": [
+        "The current local time is {current_time}."
+      ]
+    },
+    {
+      "tag": "date_query",
+      "patterns": [
+        "what is today's date",
+        "what day is it",
+        "tell me the date",
+        "what's the date today",
+        "today's date"
+      ],
+      "responses": [
+        "Today is {current_date}."
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "tell me a joke",
+        "make me laugh",
+        "say something funny",
+        "do you know any jokes",
+        "tell another joke"
+      ],
+      "responses": [
+        "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
+        "There are only 10 types of people in the world: those who understand binary, and those who don't.",
+        "Why did the NLP model go to therapy? It had too much unresolved baggage of words!",
+        "Why do Python developers wear glasses? Because they don't C#!",
+        "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?'"
+      ]
+    },
+    {
+      "tag": "mood_positive",
+      "patterns": [
+        "i feel good",
+        "i am happy",
+        "today is great",
+        "i feel wonderful",
+        "feeling awesome",
+        "i love coding",
+        "having a good day"
+      ],
+      "responses": [
+        "That's fantastic to hear! Keep that positive energy going! ✨",
+        "Awesome! A good mood makes learning and building things even more fun.",
+        "I'm glad you're feeling good! What shall we explore next?"
+      ]
+    },
+    {
+      "tag": "mood_negative",
+      "patterns": [
+        "i am sad",
+        "i feel down",
+        "having a bad day",
+        "i am frustrated",
+        "i am stressed",
+        "i feel upset"
+      ],
+      "responses": [
+        "I'm sorry to hear that. Take a deep breath — even small steps forward make a difference. 💙",
+        "Hang in there! Everyone has tough moments. Is there a topic or question I can help distract you with?",
+        "Sending you positive thoughts. Remember to take a quick break, drink some water, and be gentle with yourself."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "what can you do",
+        "how to use",
+        "commands",
+        "what can i ask",
+        "features"
+      ],
+      "responses": [
+        "Here are things you can try:\n  • Say hello or goodbye\n  • Tell me your name ('My name is Alex') and ask 'What is my name?'\n  • Ask 'What is NLP?' or 'How do chatbots work?'\n  • Ask for the time or date\n  • Ask 'Tell me a joke'\n  • Express how you are feeling (happy, stressed, etc.)"
+      ]
+    }
+  ],
+  "fallbacks": [
+    "I'm not quite sure I understood that. Could you rephrase it or try asking something else?",
+    "That's interesting! I don't have a trained pattern for that yet, but I'm constantly learning. Type 'help' to see what I can do.",
+    "Hmm, my similarity score for that is a bit low. Could you try asking in different words?",
+    "I didn't catch that. Type 'help' to see examples of what you can ask me!"
+  ]
+}
+
